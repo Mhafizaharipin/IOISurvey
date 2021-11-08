@@ -1,0 +1,52 @@
+﻿body {
+    background-color:#f1faff;
+}
+
+nav
+{
+    border-style: solid;
+    border-color: inherit;
+    border-width: 1px;
+    background-color: #ffffff;
+    padding: 5px;
+    height: 55px;
+}
+
+ul{
+    list-style-type: none;
+    
+}
+
+li a{
+    color: #000000;
+    font-size: 15px;
+    column-width: 25px;
+}
+
+li{
+    display: inline;
+    padding-left: 2px;
+    column-width: 25px;
+}
+
+a{
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+li a:hover
+{
+    background-color: #2aacd7;
+    color: #004757;
+}
+
+.footer
+{
+    position:absolute;
+    bottom:0px;
+    width:100%;
+    text-align:center;
+}
+
+
+

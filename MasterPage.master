@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs"  Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>IOI Survey</title>
+    <link rel="shortcut icon" href="images/icon.png" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="StyleSheet.css" rel="stylesheet" />
+
+    <script>
+        //disable backspace or back button
+        function disableBackButton()
+        {
+            window.history.forward();
+        }
+    </script>
+</head>
+<body onload="disableBackButton()">
+        <nav id="nav">
+            <ul style="float:left; ">
+                <li>
+                    <asp:Image runat="server" ImageUrl="~/images/icon.png" Width="25px" Height="25px" />
+                </li>
+            </ul>
+            <ul style="float:right; margin-right:25px;">
+                <li>
+                    <a href="Default.aspx" class="linknav"> Logout </a>
+                </li>
+            </ul>
+        </nav>
+       
+    <form id="form1" runat="server">
+         <div id="con">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <div id="footer" class="footer" runat="server">
+                <!--Copyright-->
+                <p><strong></strong></p>
+            </div>
+        </div>
+    </form>
+</body>
+    
+</html>
