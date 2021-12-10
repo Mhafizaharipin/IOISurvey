@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="FunctionSelection.aspx.cs" Inherits="FunctionSelection" MasterPageFile="~/MasterPage.master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AddMapSelection.aspx.cs" Inherits="AddMapSelection" MasterPageFile="~/MasterPage.master" %>
 
 <asp:Content ContentPlaceHolderID="head" runat="server">
     <style>
@@ -25,21 +25,28 @@
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>
         <center>
-            <h2 style="margin-top:7%">SELECT FUNCTION</h2>
+            <h2 style="margin-top:7%">SELECT ADD MAP</h2>
             <table style="margin-top:2%">
                 <tr>
                     <td>
-                        <asp:Button ID="addBtn" runat="server" OnClick="addBtn_Click" Text="ADD MAP" CssClass="button" />
+                        <asp:Button ID="addBtn" runat="server" OnClick="addBtn_Click" Text="ADD OTHER MAP" CssClass="button" />
                     </td>
                     <td></td>
                     <td></td>
                     <td>
-                        <asp:Button ID="searchBtn" runat="server" OnClick="searchBtn_Click" Text="SEARCH MAP" CssClass="button" />
+                        <asp:Button ID="addMap" runat="server" OnClick="addMap_Click" Text="ADD LAND TITLE MAP" CssClass="button" Width="218px" />
                     </td>
-
                 </tr>
                 </table>
+            <br />
+            <br />
+            <table>
+                <tr>
+                    <td>
+                        <asp:Button ID="backbtn" runat="server" Text="BACK" CssClass="button" Width="106px" OnClick="backbtn_Click" />
+                    </td>
+                </tr>
+            </table>
         </center>
     </div>
 </asp:Content>
-

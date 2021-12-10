@@ -13,7 +13,7 @@ public partial class FunctionSelection : System.Web.UI.Page
     }
     protected void addBtn_Click(object sender, EventArgs e)
     {
-        Response.Redirect("AddMap.aspx");
+        Response.Redirect("AddMapSelection.aspx");
     }
     protected void searchBtn_Click(object sender, EventArgs e)
     {

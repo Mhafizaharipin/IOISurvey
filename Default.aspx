@@ -75,6 +75,11 @@
                     <asp:TextBox ID="password" CssClass="txtbox" runat="server" TextMode="Password"  Width="200px" placeholder="IC No without dash (-)"></asp:TextBox>
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <asp:CheckBox ID="ShowPassword" runat="server" CssClass="checkbox" OnCheckedChanged="ShowPassword_CheckedChanged" AutoPostBack="true"/>Show Password
+                </td>
+            </tr>
         </table>
         <br />
         <table>

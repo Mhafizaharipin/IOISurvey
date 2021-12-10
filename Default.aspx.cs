@@ -80,4 +80,21 @@ public partial class _Default : System.Web.UI.Page
         msg = Convert.ToBase64String(encode);
         return msg;
     }
+    protected void ShowPassword_CheckedChanged(object sender, EventArgs e)
+    {
+        if (ShowPassword.Checked == true)
+        {
+            password.TextMode = TextBoxMode.SingleLine;
+            Session["pass"] = password.Text;
+        }
+        else if (ShowPassword.Checked == false)
+        {
+            password.TextMode = TextBoxMode.Password;
+            if (!(String.IsNullOrEmpty(password.Text.Trim())))
+            {
+                password.Attributes["value"] = password.Text;
+                //or txtPwd.Attributes.Add("value",txtPwd.Text);
+            }
+        }
+    }
 }

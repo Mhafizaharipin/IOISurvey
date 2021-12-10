@@ -14,6 +14,11 @@ public partial class RegisterUser : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
+        if(IsPostBack)
+        {
+            //txtPassword.Text = Session["pass"].ToString();
+            
+        }
     }
     protected void registerbtn_Click(object sender, EventArgs e)
     {
@@ -58,7 +63,7 @@ public partial class RegisterUser : System.Web.UI.Page
 
                 txtUsername.Text = string.Empty;
                 txtFullname.Text = string.Empty;
-                txtPassword.Text = string.Empty;
+                txtPassword.Attributes["value"] = string.Empty;
 
                 txtUsername.Focus();
 
@@ -78,5 +83,23 @@ public partial class RegisterUser : System.Web.UI.Page
         encode = System.Text.Encoding.UTF8.GetBytes(password);
         msg = Convert.ToBase64String(encode);
         return msg;
+    }
+
+    protected void ShowPassword_CheckedChanged(object sender, EventArgs e)
+    {
+        if(ShowPassword.Checked == true)
+        {
+            txtPassword.TextMode = TextBoxMode.SingleLine;
+            Session["pass"] = txtPassword.Text;
+        }
+        else if(ShowPassword.Checked == false)
+        {
+            txtPassword.TextMode = TextBoxMode.Password;
+            if (!(String.IsNullOrEmpty(txtPassword.Text.Trim())))
+            {
+                txtPassword.Attributes["value"] = txtPassword.Text;
+                //or txtPwd.Attributes.Add("value",txtPwd.Text);
+            }
+        }
     }
 }

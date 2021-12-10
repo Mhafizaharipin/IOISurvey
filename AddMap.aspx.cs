@@ -281,6 +281,6 @@ public partial class AddMap : System.Web.UI.Page
         estate.Text = string.Empty;
         district_p.Text = string.Empty;
         estate_p.Text = string.Empty;
-        Response.Redirect("FunctionSelection.aspx");
+        Response.Redirect("AddMapSelection.aspx");
     }
 }

@@ -37,7 +37,7 @@ public partial class SearchPlan : System.Web.UI.Page
         {
             string connectionString = "datasource=localhost; port= 3306; username=root; password=; database=survey";
 
-            string query = "SELECT * FROM plan WHERE planNo ='" + planno.Text + "' AND type = 'perimeter'";
+            string query = "SELECT * FROM plan WHERE planNo LIKE '%" + planno.Text + "%' AND type = 'perimeter'";
 
             MySqlConnection databaseConnect = new MySqlConnection(connectionString);
 
